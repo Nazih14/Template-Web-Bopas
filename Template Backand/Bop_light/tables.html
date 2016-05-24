@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bp - Tables</title>
+
+	<link href="media/css/bootstrap.min.css" rel="stylesheet">
+	<link href="media/css/ionicons.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="media/css/materialdesignicons.min.css">
+	<link href="media/css/datepicker3.css" rel="stylesheet">
+	<link href="media/css/bootstrap-table.css" rel="stylesheet">
+	<link href="media/css/styles.css" rel="stylesheet">
+
+	<!--Icons-->
+	<script src="media/js/lumino.glyphs.js"></script>
+	<script src="media/js/custom.js"></script>
+
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#"><span>Bop</span> - Admin</a>
+				<ul class="user-menu">
+					<li class="dropdown pull-right">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> User <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Profile</a></li>
+							<li><a href="#"><svg class="glyph stroked gear"><use xlink:href="#stroked-gear"></use></svg> Settings</a></li>
+							<li><a href="#"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+		</div><!-- /.container-fluid -->
+	</nav>
+
+	<div id="wrapper">
+		<div id="sidebar-wrapper">
+			<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+			<div class="nav-side-menu">
+				<div class="menu-list">
+
+					<ul id="menu-content" class="menu-content collapse out">
+						<li>
+							<a href="http://localhost/general/Template_dashboard/Bop_general/index.html#">
+								<i class="fa fa-dashboard fa-lg"></i> Dashboard
+							</a>
+						</li>
+
+						<li  data-toggle="collapse" data-target="#products" class="collapsed active">
+							<a href="#"><i class="fa fa-gift fa-lg"></i> UI Elements <span class="arrow"></span></a>
+						</li>
+						<ul class="sub-menu collapse" id="products">
+							<li class="active"><a href="http://localhost/general/Template_dashboard/Bop_general/tables.html#">Tables 1</a></li>
+							<li><a href="#">Tables 2</a></li>
+							<li><a href="#">Tables 3</a></li>
+							<li><a href="#">Tables 4</a></li>
+						</ul>
+
+
+						<li data-toggle="collapse" data-target="#service" class="collapsed">
+							<a href="#"><i class="fa fa-globe fa-lg"></i> Forms <span class="arrow"></span></a>
+						</li>  
+						<ul class="sub-menu collapse" id="service">
+							<li><a href="http://localhost/general/Template_dashboard/Bop_general/forms.html#">Form 1</a></li>
+							<li><a href="#">Form 2</a></li>
+							<li><a href="#">Form 3</a></li>
+						</ul>
+
+
+						<li data-toggle="collapse" data-target="#new" class="collapsed">
+							<a href="#"><i class="fa fa-car fa-lg"></i> New <span class="arrow"></span></a>
+						</li>
+						<ul class="sub-menu collapse" id="new">
+							<li>New New 1</li>
+							<li>New New 2</li>
+							<li>New New 3</li>
+						</ul>
+
+
+						<li>
+							<a href="#">
+								<i class="fa fa-user fa-lg"></i> Profile
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<i class="fa fa-users fa-lg"></i> Users
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- Halaman konten -->
+		<div id="page-content-wrapper">
+			<!-- Div semua konten -->
+			<div class="page-content inset">
+				<div class="row">
+					<ol class="breadcrumb">
+						<a id="menu-toggle" data-toggle="collapse" data-target="#menu-content" href="#" class="btn-outline"><i class="glyphicon glyphicon-th-list"></i></a>
+						<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
+						<li class="active">Icons</li>
+					</ol>
+				</div><!--/.row-->
+
+
+				<div class="row">
+					<div class="col-lg-12">
+						<h2 class="page-header">Tables</h2>
+					</div>
+				</div><!--/.row-->
+				
+
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="panel panel-default">
+							<div class="panel-heading">Advanced Table</div>
+							<div class="panel-body">
+							<div class="table-responsive">
+								<table class="table table-responsive fixed-table-container">
+									<thead>
+										<tr>
+											<th data-field="state" data-checkbox="true" >Item ID</th>
+											<th data-field="id" data-sortable="true">Item ID</th>
+											<th data-field="name"  data-sortable="true">Item Name</th>
+											<th data-field="price" data-sortable="true">Item Price</th>
+											<th data-field="price" data-sortable="true">Action</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<td class="">Internet Explorer 4.0</td>
+										<td class="">Trident</td><td class="">Win 95+</td>
+										<td class="center">4</td>
+										<td>
+											<button type="button" class="btn btn-xs btn-primary">
+												<span class="glyphicon glyphicon-pencil"></span>
+											</button>
+											<button type="button" data-bind="click: $parent.remove" class="remove-news btn btn-xs btn-danger" data-toggle="tooltip" data-placement="top" data-original-title="Delete">
+												<span class="glyphicon glyphicon-trash"></span>
+											</button>
+											<button type="button" class="enabledisable-news btn btn-xs btn-success">
+												<span class="glyphicon glyphicon-ok"></span>
+											</button></td>   
+										</tr>
+									</tbody> 
+								</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!--/.row-->	
+				<div class="row">
+					<div class="col-md-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">Basic Table</div>
+							<div class="panel-body">
+								<div class="tabel-responsive">
+								<table class="table table-responsive fixed-table-container">
+									<thead>
+										<tr>
+											<th data-field="id" data-align="right" >Item ID</th>
+											<th data-field="name" >Item Name</th>
+											<th data-field="price" >Item Price</th>
+										</tr>
+									</thead>
+										<tbody>
+										<td class="">Internet Explorer 4.0</td>
+										<td class="">Trident</td>
+										<td>
+											<button type="button" class="btn btn-xs btn-primary">
+												<span class="glyphicon glyphicon-pencil"></span>
+											</button>
+											<button type="button" data-bind="click: $parent.remove" class="remove-news btn btn-xs btn-danger" data-toggle="tooltip" data-placement="top" data-original-title="Delete">
+												<span class="glyphicon glyphicon-trash"></span>
+											</button>
+											<button type="button" class="enabledisable-news btn btn-xs btn-success">
+												<span class="glyphicon glyphicon-ok"></span>
+											</button></td>   
+										</tr>
+									</tbody> 
+								</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">Styled Table</div>
+							<div class="panel-body">
+							<div class="tabel-responsive">
+								<table class="table table-responsive fixed-table-container">
+									<thead>
+										<tr>
+											<th data-field="id" data-align="right" >Item ID</th>
+											<th data-field="name" >Item Name</th>
+											<th data-field="price" >Item Price</th>
+										</tr>
+									</thead>
+										<tbody>
+										<td class="">Internet Explorer 4.0</td>
+										<td class="">Trident</td>
+										<td>
+											<button type="button" class="btn btn-xs btn-primary">
+												<span class="glyphicon glyphicon-pencil"></span>
+											</button>
+											<button type="button" data-bind="click: $parent.remove" class="remove-news btn btn-xs btn-danger" data-toggle="tooltip" data-placement="top" data-original-title="Delete">
+												<span class="glyphicon glyphicon-trash"></span>
+											</button>
+											<button type="button" class="enabledisable-news btn btn-xs btn-success">
+												<span class="glyphicon glyphicon-ok"></span>
+											</button></td>   
+										</tr>
+									</tbody> 
+								</table>
+								</div>
+								<script>
+									// $(function () {
+									// 	$('#hover, #striped, #condensed').click(function () {
+									// 		var classes = 'table';
+
+									// 		if ($('#hover').prop('checked')) {
+									// 			classes += ' table-hover';
+									// 		}
+									// 		if ($('#condensed').prop('checked')) {
+									// 			classes += ' table-condensed';
+									// 		}
+									// 		$('#table-style').bootstrapTable('destroy')
+									// 		.bootstrapTable({
+									// 			classes: classes,
+									// 			striped: $('#striped').prop('checked')
+									// 		});
+									// 	});
+									// });
+
+									// function rowStyle(row, index) {
+									// 	var classes = ['active', 'success', 'info', 'warning', 'danger'];
+
+									// 	if (index % 2 === 0 && index / 2 < classes.length) {
+									// 		return {
+									// 			classes: classes[index / 2]
+									// 		};
+									// 	}
+									// 	return {};
+									// }
+								</script>
+							</div>
+						</div>
+					</div>
+				</div><!--/.row-->	
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="media/js/jquery-1.11.1.min.js"></script>
+<script src="media/js/bootstrap.min.js"></script>
+<script src="media/js/chart.min.js"></script>
+<script src="media/js/chart-data.js"></script>
+<script src="media/js/easypiechart.js"></script>
+<script src="media/js/easypiechart-data.js"></script>
+<script src="media/js/bootstrap-datepicker.js"></script>
+<script src="media/js/bootstrap-table.js"></script>
+<script>
+	$("#menu-toggle").click(function(e) {
+		e.preventDefault();
+		$("#wrapper").toggleClass("active");
+	});
+</script>	
+</body>
+
+</html>
